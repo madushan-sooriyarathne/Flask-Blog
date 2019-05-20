@@ -5,24 +5,23 @@ Resources to create this project from scratch : https://www.youtube.com/watch?v=
 
 ## Technology stack:
 
-    Language / platform: Python
-    Framework : Flask
-    Database: sqlite (This can be change to any relational db)
-    Database handling / mapper: SQLAlchemy (flask_sqlalchmey package)
-    Basic Styling: Bootstrap (and some custom styling 😉)
-    User authentication and session handling: flask_loging package
-    Password encrypting and decrypting: Bcrypt (flask_bcrypt package)
-    Sending emails: Flask Mail package
-    Password reset token handling: Itsdangerous package
-    Image manipulation: Pillow package
+- **Language** / platform: Python
+- **Framework** : Flask
+- **Database handling / mapper**: SQLAlchemy (flask_sqlalchmey package)
+- **Basic Styling**: Bootstrap (and some custom styling 😉)
+- **User authentication and session handling**: flask_loging package
+- **Password encrypting and decrypting**: Bcrypt (flask_bcrypt package)
+- **Sending emails**: Flask Mail package
+- **Password reset token handling**: Itsdangerous package
+- **Image manipulation**: Pillow package
  
 
 ## What it can:
-    Register new users
-    create/preview/update/delete articles;
-    update user profiles
-    reset passwords via a reset email
-    custom error pages
+- Register new users
+- create/preview/update/delete articles;
+- update user profiles
+- reset passwords via a reset email
+- custom error pages
 
 
 ## Requirements:
@@ -49,11 +48,11 @@ Resources to create this project from scratch : https://www.youtube.com/watch?v=
 
 ## Installation:
 
-git clone https://github.com/madushan-sooriyarathne/Flask-Blog.git
+- git clone https://github.com/madushan-sooriyarathne/Flask-Blog.git
 
-cd Flask-Blog
+- cd Flask-Blog
 
-pipenv install
+- pipenv install
 
 After this edit the config.cfg file to match your configs
 

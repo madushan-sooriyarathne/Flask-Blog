@@ -8,6 +8,7 @@
                 <h2 class="account-heading">{{ current_user.username }}</h2>
                 <p class="text-secondary">{{ current_user.email }}</p>
                 <a class="btn btn-sm btn-warning" href="{{ url_for('users.user_posts', username=current_user.username) }}">My Posts</a>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModel">Delete Account</button>
             </div>
         </div>
         <form method="POST" action="" enctype="multipart/form-data">
@@ -57,11 +58,24 @@
             </div>
         </form>
     </div>
-{% endblock %}
 
-<div class="content-section">
-        
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="deleteModelLabel">Are you sure?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <form action="{{ url_for('users.delete_account', username=current_user.username) }}", method="POST">
+                <input type="submit" value="Delete my account" class="btn btn-danger">
+            </form>
+            </div>
+        </div>
+        </div>
     </div>
-    <div class="border-top pt-3">
-        <small class="text-muted">Already have an account? <a href="{{ url_for('users.login') }}" class="ml-2">Login</a></small>
-    </div>
+{% endblock %}
